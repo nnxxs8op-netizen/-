@@ -10,7 +10,7 @@ body {
   text-align: center; /* يخلي كل شي بالنص */
 }
 
-/* البانر */
+/* القائمه */
 .hero {
   background-image: url("https://images.pexels.com/photos/6208086/pexels-photo-6208086.jpeg");
   background-size: cover;
@@ -25,7 +25,7 @@ body {
   text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
 }
 
-/* المنيو */
+/* االقائمه */
 .nav-links {
   margin: 20px 0;
 }
