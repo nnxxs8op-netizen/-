@@ -115,3 +115,129 @@ button:hover {
 .nav-links a:active {
     color: #0d3b12;
 }
+/* تنسيق البطاقة البيضاء */
+.plant-details-card {
+    background-color: white;
+    max-width: 700px;
+    margin: 50px auto; /* لتوسيط البطاقة في نص الصفحة */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    direction: rtl; /* عشان التنسيق العربي يضبط */
+}
+
+/* تنسيق زر الرجوع ليكون أرقى من الشكل الافتراضي */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style-position: inside;
+    padding-right: 0;
+}
+/* تنسيق زر الرجوع  */
+.back-btn {
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+    color: #2e4d2e;           /* لون الخط أخضر  */
+    padding: 12px 30px;
+    border: 2px solid #2e4d2e; /* إطار    */
+    border-radius: 12px;       /* حواف    */
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;          /* لإخفاء تأثير الضوء الخارج عن الحدود */
+    transition: all 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;                 /* مسافة بين النص والسهم */
+    text-decoration: none;
+}
+
+/* تأثير عند مرور الماوس */
+.back-btn:hover {
+    background: #2e4d2e;      /* ينعكس اللون ويصبح الأخضر هو الخلفية */
+    color: white;             /* النص يصير أبيض */
+    box-shadow: 0 0 20px rgba(46, 77, 46, 0.4); /* توهج أخضر خفيف */
+    transform: scale(1.05);    /* تكبير بسيط جداً    */
+}
+
+/* إضافة تأثير السهم المتحرك */
+.back-btn::after {
+    content: '';
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover::after {
+    transform: translateX(-5px); /* السهم يتحرك لليسار لما نأشر عليه */
+}
+/* --- تنسيق زر الرجوع  --- */
+.back-btn {
+    /* سوينا الخلفية شفافه */
+    background: rgba(255, 255, 255, 0.1); 
+    color: #2e4d2e;           /* لون الخط أخضر متناسق مع الثيم */
+    padding: 12px 30px;       /* عطينا مساحة للزر */
+    border: 2px solid #2e4d2e; /* إطار يحدد شكل الزر */
+    border-radius: 12px;       /* زوايا منحنية  */
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;           /*هذا يغير شكل المؤشر لازم نغيره عشان مؤشر الورقه */
+    position: relative;
+    overflow: hidden;         
+    transition: all 0.4s ease; 
+    display: inline-flex;
+    align-items: center;       /* يوسط النص والسهم عمودياً */
+    gap: 10px;                 /* يخلي فيه مسافة ثابتة بين كلمة رجوع والسهم */
+    text-decoration: none;     /* يشيل الخط اللي يجي تحت الروابط  */
+}
+
+/* --- تأثير الزر عند تمرير الماوس (Hover) --- */
+.back-btn:hover {
+    /* هنا قلبنا الألوان: الخلفية تصير خضراء والنص يصير أبيض */
+    background: #2e4d2e;      
+    color: white;             
+    box-shadow: 0 0 20px rgba(46, 77, 46, 0.4); 
+    /* الزر يكبر شي بسيط (5%)  */
+    transform: scale(1.05);    
+}
+
+/* --- إضافة السهم برمجياً (Before/After) --- */
+.back-btn::after {
+    transition: transform 0.3s ease; 
+}
+/* --- حركة السهم عند تمرير الماوس --- */
+.back-btn:hover::after {
+    transform: translateX(-5px); 
+}
+/* تنسيق عام لكل روابط الأسماء في الكروت */
+.card h3 a {
+    text-decoration: none; /* يشيل الخط */
+    transition: 0.3s;      /* نعومة في تغيير اللون */
+}
+
+/* تخصيص الألوان لكل نبتة */
+.link-jasmine { color: #d4af37; } /* ذهبي/أصفر */
+.link-tulip { color: #d62828; }   /* أحمر */
+.link-pothos { color: #2d6a4f; }  /* أخضر غامق */
+.link-cactus { color: #4b6a4a; }  /* أخضر زيتوني */
+.link-lavender { color: #8e44ad; } /* بنفسجي */
+.link-mint { color: #52b788; }     /* أخضر فاتح منعش */
+.link-ficus { color: #1b4332; }    /* أخضر غابة داكن */
+.link-monstera { color: #081c15; } /* أخضر مسود */
+
+/* تأثير عند التأشير (Hover) - يفتح اللون شوي */
+.card h3 a:hover {
+    filter: brightness(1.3);
+}
