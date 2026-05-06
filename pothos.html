@@ -25,10 +25,23 @@
 
     <p><strong>ملاحظة من "رواء":</strong> إذا بدأت الأوراق تصفر، غالبًا تحتاج تقليل ماء أو تغيير مكانها لضوء أقل 🌿</p>
 
+    <div class="adoption-container">
+    <p>المخزون المتاح: <span id="stock-count">10</span></p>
+    
+    <div class="quantity-controls">
+        <button type="button" onclick="changeQuantity(-1)">-</button>
+        <span id="chosen-quantity">1</span>
+        <button type="button" onclick="changeQuantity(1)">+</button>
+    </div>
+
+    <button type="button" class="confirm-btn" onclick="confirmAdoption()">تأكيد التبني</button>
+</div>
+
     <div style="text-align: center;">
       <a href="index.html" class="back-btn">رجوع</a>
     </div>
 
   </div>
+  <script src="javascript.js"></script>
   </body>
 </html>
