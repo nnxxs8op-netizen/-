@@ -100,10 +100,22 @@
 
   <p><strong>ملاحظة من "رواء":</strong> تغيير مكانها كثير ممكن يسبب تساقط الأوراق 🪴</p>
 
+  <div class="adoption-container">
+    <p>المخزون المتاح: <span id="stock-count">10</span></p>
+    
+    <div class="quantity-controls">
+        <button type="button" onclick="changeQuantity(-1)">-</button>
+        <span id="chosen-quantity">1</span>
+        <button type="button" onclick="changeQuantity(1)">+</button>
+    </div>
+
+    <button type="button" class="confirm-btn" onclick="confirmAdoption()">تأكيد التبني</button>
+</div>
+
   <a href="index.html">
     <button>  رجوع</button>
   </a>
 </div>
-
+<script src="javascript.js"></script>
 </body>
 </html>
