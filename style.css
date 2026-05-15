@@ -299,3 +299,65 @@ ul {
     background: #3e4e3e;
     transform: scale(1.03);
 }
+/* --- تنسيق قسم الأسئلة المطور --- */
+.questions {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: right; /* يضمن اتجاه النص للعربي */
+}
+
+.faq-item {
+    background: #ffffff;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #e0dcd6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* تنسيق السؤال (اللي تضغطين عليه) */
+.faq-item summary {
+    padding: 18px 25px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #3e4e3e;
+    cursor: pointer;
+    list-style: none; /* يشيل السهم القديم */
+    position: relative;
+    outline: none;
+}
+
+/* إضافة أيقونة "+" تظهر بجانب السؤال */
+.faq-item summary::before {
+    content: '+';
+    float: left;
+    font-size: 20px;
+    color: #5a6d4f;
+    transition: 0.3s;
+}
+
+/* لما يفتح السؤال، الزائد تتحول لناقص */
+.faq-item[open] summary::before {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-item summary:hover {
+    background-color: #fcfbf9;
+}
+
+/* تنسيق الجواب */
+.faq-content {
+    padding: 0 25px 20px;
+    color: #666;
+    line-height: 1.8;
+    border-top: 1px solid #f3efe9;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

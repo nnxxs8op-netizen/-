@@ -1,57 +1,65 @@
-<!-- الصفحة الثامنة: صفحة تفاصيل نبتة الفيكس -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الفيكس 🪴</title>
+    <meta charset="UTF-8">
+    <title>الفيكس 🪴</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- ربط ملف CSS -->
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="card">
-  <h1>🪴 نبتة: الفيكس</h1>
+    <div class="plant-details-card">
+        <h1>🪴 نبتة: الفيكس</h1>
 
-  <p><strong>الوصف:</strong> نبتة أنيقة تضيف لمسة فخامة للمكان، بأوراقها الكبيرة واللامعة.</p>
+        <p><strong>الوصف:</strong> نبتة أنيقة تضيف لمسة فخامة للمكان، بأوراقها الكبيرة واللامعة.</p>
+        <p><strong>مستوى العناية:</strong> متوسط ⭐⭐</p>
+        <p><strong>العناية:</strong> عند جفاف سطح التربة</p>
+        <p><strong>الإضاءة:</strong> ضوء غير مباشر</p>
 
-  <p><strong>مستوى العناية:</strong> متوسط ⭐⭐</p>
+        <p><strong>مميزات النبتة:</strong></p>
+        <ul>
+            <li>شكل فاخر وجذاب</li>
+            <li>مناسبة للبيوت والمكاتب</li>
+            <li>تعيش لفترة طويلة</li>
+        </ul>
 
-  <p><strong>العناية:</strong> عند جفاف سطح التربة</p>
+        <p><strong>ملاحظة من "رواء":</strong> تغيير مكانها كثير ممكن يسبب تساقط الأوراق 🪴</p>
 
-  <p><strong>الإضاءة:</strong> ضوء غير مباشر</p>
+        <div class="adoption-container">
+            <p>المخزون المتاح: <span id="stock-count">10</span></p>
 
-  <p><strong>مميزات النبتة:</strong></p>
+            <div class="quantity-controls">
+                <button type="button" onclick="changeQuantity(-1)">-</button>
+                <span id="chosen-quantity">1</span>
+                <button type="button" onclick="changeQuantity(1)">+</button>
+            </div>
 
-  <ul>
-    <li>شكل فاخر وجذاب</li>
-    <li>مناسبة للبيوت والمكاتب</li>
-    <li>تعيش لفترة طويلة</li>
-  </ul>
+            <button type="button" class="confirm-btn" onclick="confirmAdoption()">تأكيد التبني</button>
+        </div>
 
-  <p><strong>ملاحظة من "رواء":</strong> تغيير مكانها كثير ممكن يسبب تساقط الأوراق 🪴</p>
-
-  <div class="adoption-container">
-    <p>المخزون المتاح: <span id="stock-count">10</span></p>
-
-    <div class="quantity-controls">
-      <button type="button" onclick="changeQuantity(-1)">-</button>
-      <span id="chosen-quantity">1</span>
-      <button type="button" onclick="changeQuantity(1)">+</button>
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">رجوع</a>
+        </div>
     </div>
 
-    <button type="button" class="confirm-btn" onclick="confirmAdoption()">تأكيد التبني</button>
-  </div>
+    <script>
+        let quantity = 1;
+        const maxStock = 10;
 
-  <a href="index.html">
-    <button>رجوع</button>
-  </a>
-</div>
+        function changeQuantity(val) {
+            quantity += val;
+            if (quantity < 1) quantity = 1;
+            if (quantity > maxStock) quantity = maxStock;
+            document.getElementById('chosen-quantity').innerText = quantity;
+        }
 
-<script src="javascript.js"></script>
+        function confirmAdoption() {
+            alert("تم تأكيد تبني " + quantity + " من الفيكس بنجاح! 🪴");
+        }
+    </script>
 
 </body>
 </html>
